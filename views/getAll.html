@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<body>
+        <h1>insert task</h1></br>
+        <h1>
+            <a href="/">Home page</a>
+            <a href="/insert">Insert Users</a>
+            <a href="/getAll">List Users</a>
+            <a href="/update">Update User</a>
+            <a href="/deleteuser">Delete User</a>
+        </h1>
+        <table>
+                <tr>
+                    <td>Task ID</td>
+                    <td>Task name</td>
+                    <td>Assign person</td>
+                    <td>Due date</td>
+                    <td>Task status</td>
+                    <td>Task description</td>
+                </tr>
+                <% for (let i=0;i<usersDb.length;i++){ %>
+                    <tr>
+                        <td><%= usersDb[i].Taskid %> </td>
+                        <td> <%= usersDb[i].Task %> </td>
+                        <td><%= usersDb[i].assignPerson %></td>
+                        <td><%= usersDb[i].dueDate %> </td>
+                        <td> <%= usersDb[i].taskStatus %> </td>
+                        <td><%= usersDb[i].taskDescription %></td>
+                    </tr>
+                    <%}%>
+            </table>
+</body>
